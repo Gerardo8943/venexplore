@@ -1,0 +1,265 @@
+.main {
+  min-height: 100vh;
+  /* Add padding top so navbar doesn't cover content if fixed, but since it's floating, we can manage it */
+}
+
+/* Full Screen Hero Wrapper */
+.heroWrapper {
+  width: 100%;
+  position: relative;
+  /* Espacio extra abajo porque la barra flotante (searchBar) rompe un poco hacia afuera */
+  margin-bottom: 60px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+}
+
+.heroImage {
+  object-fit: cover;
+  z-index: 1;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  /* A very soft dark gradient ONLY at the bottom to ensure the white text is readable 
+     if the user's local image is bright. The top stays bright/transparent */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 100%);
+}
+
+.heroContentGrid {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  padding: clamp(32px, 5vw, 64px);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .heroContentGrid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.heroTitle {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(4rem, 10vw, 10rem);
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  grid-column: 1 / -1;
+  align-self: center;
+}
+
+@media (min-width: 1024px) {
+  .heroTitle {
+    grid-column: 1 / 2;
+  }
+}
+
+.heroBottomRight {
+  grid-column: 1 / -1;
+  align-self: flex-end;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 1024px) {
+  .heroBottomRight {
+    grid-column: 2 / 3;
+    margin-left: auto;
+  }
+}
+
+.heroDescription {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.letsGoBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background-color: #111111;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 50px;
+  border: none;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  width: max-content;
+  cursor: pointer;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.letsGoBtn:hover {
+  background-color: #333333;
+  transform: translateX(5px);
+}
+
+/* Floating Search Bar */
+.searchBar {
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1000px;
+  background-color: white;
+  border-radius: 24px;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  z-index: 20;
+}
+
+@media (min-width: 768px) {
+  .searchBar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.searchTitle {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.5rem;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+}
+
+.searchSubtitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.searchActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.searchPill {
+  background-color: #f3f4f6;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.searchSubmitBtn {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.searchSubmitBtn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Base structural styles untouched below */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.introSection {
+  padding: calc(var(--space-24) + 32px) 0 var(--space-12);
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-4);
+  color: var(--color-primary);
+}
+
+.sectionSubtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: var(--space-8) 0;
+}
+
+.stateBlock {
+  margin-bottom: var(--space-24);
+}
+
+.stateHeader {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.stateName {
+  font-size: 3rem;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.stateTagline {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+}
+
+/* On large screens, we break categories down into 3 columns */
+@media (min-width: 1024px) {
+  .categoriesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .categoryCardOverride {
+    flex-direction: column !important;
+    height: 100% !important;
+  }
+  
+  .categoryCardOverride [class*="imageContainer"],
+  .categoryCardOverride [class*="content"] {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,78 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  transition: all var(--transition-fast);
+  outline: none;
+  text-decoration: none;
+}
+
+/* Focus states */
+.button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Sizes */
+.sm {
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.875rem;
+}
+
+.md {
+  padding: var(--space-3) var(--space-6);
+  font-size: 1rem;
+}
+
+.lg {
+  padding: var(--space-4) var(--space-8);
+  font-size: 1.125rem;
+  border-radius: var(--radius-md);
+}
+
+/* Variants */
+.primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+.primary:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 119, 182, 0.3);
+}
+
+.secondary {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border: 1px solid #E5E7EB; /* Light gray border */
+}
+.secondary:hover {
+  background-color: #F3F4F6;
+  border-color: #D1D5DB;
+}
+
+.ghost {
+  color: var(--color-primary);
+}
+.ghost:hover {
+  background-color: rgba(0, 119, 182, 0.08);
+}
+
+/* Dark mode adjustments applied via CSS variables mostly, 
+   but specific overrides if needed can go here */
+@media (prefers-color-scheme: dark) {
+  .secondary {
+    background-color: var(--color-surface);
+    border-color: #374151;
+  }
+  .secondary:hover {
+    background-color: #374151;
+    border-color: #4B5563;
+  }
+}
