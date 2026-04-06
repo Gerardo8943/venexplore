@@ -34,7 +34,7 @@
   z-index: 2;
   /* A very soft dark gradient ONLY at the bottom to ensure the white text is readable 
      if the user's local image is bright. The top stays bright/transparent */
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 .heroContentGrid {
@@ -75,21 +75,34 @@
 .heroBottomRight {
   grid-column: 1 / -1;
   align-self: flex-end;
-  max-width: 400px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  padding: 32px;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  
+  /* FORZADO HACIA ABAJO USANDO MÁRGENES NEGATIVOS PARA CONTRARRESTAR EL PADDING DE LA PANTALLA */
+  margin-bottom: -32px;
+  transform: translateY(20px);
 }
 
 @media (min-width: 1024px) {
   .heroBottomRight {
     grid-column: 2 / 3;
     margin-left: auto;
+    /* EN PANTALLA GRANDE LO EMPUJAMOS MUCHO MÁS AL BORDE INFERIOR */
+    margin-bottom: -64px;
+    transform: translateY(40px);
   }
 }
 
 .heroDescription {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-text);
+  /* dark text on white box */
   font-family: var(--font-inter), sans-serif;
   font-size: 1rem;
   line-height: 1.6;
@@ -123,15 +136,17 @@
   bottom: -32px;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
-  max-width: 1000px;
+  width: max-content;
+  /* Hugs the text perfectly */
+  max-width: 90vw;
+  /* Avoids screen overflow */
   background-color: white;
   border-radius: 24px;
   padding: 24px 32px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
   z-index: 20;
 }
 
@@ -252,12 +267,12 @@
   .categoriesGrid {
     grid-template-columns: repeat(3, 1fr);
   }
-  
+
   .categoryCardOverride {
     flex-direction: column !important;
     height: 100% !important;
   }
-  
+
   .categoryCardOverride [class*="imageContainer"],
   .categoryCardOverride [class*="content"] {
     width: 100% !important;

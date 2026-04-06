@@ -9,13 +9,13 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      
+
       <main className={styles.main}>
         {/* HERO SECTION - PAPERPILLAR STYLE */}
         <div className={styles.heroWrapper}>
           <section className={styles.hero}>
-            <Image 
-              src="/hero-photo/principal-panel.jpg" 
+            <Image
+              src="/hero-photo/principal-panel.jpg"
               alt="Imponente paisaje venezolano"
               fill
               className={styles.heroImage}
@@ -23,13 +23,13 @@ export default function Home() {
             />
             {/* Subtle gradient for text legibility, much lighter than before */}
             <div className={styles.heroOverlay}></div>
-            
+
             <div className={styles.heroContentGrid}>
               <h1 className={`fade-in-up is-visible ${styles.heroTitle}`}>Venexplore</h1>
-              
+
               <div className={`fade-in-up is-visible delay-1 ${styles.heroBottomRight}`}>
                 <p className={styles.heroDescription}>
-                  Descubre maravillas ocultas y una belleza inigualable. 
+                  Descubre maravillas ocultas y una belleza inigualable.
                   Disfruta de una aventura inolvidable en este destino premium.
                 </p>
                 <button className={styles.letsGoBtn}>
@@ -46,13 +46,8 @@ export default function Home() {
           {/* FLOATING SEARCH BAR (Optional addition to match Dribbble closely) */}
           <div className={`fade-in-up is-visible delay-2 ${styles.searchBar}`}>
             <div className={styles.searchTitle}>
-              Visita destinos vírgenes con nosotros
-              <span className={styles.searchSubtitle}>Reserva tu próxima aventura hoy mismo.</span>
-            </div>
-            
-            <div className={styles.searchActions}>
-              <div className={styles.searchPill}>Desde $500</div>
-              <button className={styles.searchSubmitBtn}>Explorar planes</button>
+              Visita los lugares unicos de Venezuela
+              <span className={styles.searchSubtitle}>Preparate para tu siguiente aventura.</span>
             </div>
           </div>
         </div>
@@ -76,7 +71,7 @@ export default function Home() {
                   <h2 className={styles.stateName}>{state.name}</h2>
                   <p className={styles.stateTagline}>{state.tagline}</p>
                 </div>
-                
+
                 {/* Main State Card */}
                 <DestinationCard
                   title={state.name}
