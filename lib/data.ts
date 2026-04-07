@@ -21,21 +21,21 @@ export const venezuelaStates: StateData[] = [
     name: "Falcón",
     tagline: "Donde el desierto se encuentra con el Caribe",
     description: "Médanos dorados infinitos y aguas cristalinas conforman un paisaje surrealista que invita a la exploración sin límites.",
-    mainImage: "https://picsum.photos/seed/falcon_main/1200/800", 
+    mainImage: "/img/falcon/Medanos-de-Coro1.jpg", 
     gastronomy: {
       title: "Arepa de Coco",
       description: "Masa suave con infusión de coco fresco, rellena de frutos del mar o queso de año.",
-      imageUrl: "https://picsum.photos/seed/falcon_gastro/800/600"
+      imageUrl: "/img/falcon/Medanos-de-Coro3.jpg"
     },
     culture: {
       title: "Arquitectura Coriana",
       description: "Calles empedradas y casas de barro y caoba que susurran historias del siglo XVI.",
-      imageUrl: "https://picsum.photos/seed/falcon_cultura/800/600"
+      imageUrl: "/img/falcon/cueva.jpg"
     },
     nature: {
       title: "Morrocoy",
       description: "Cayos prístinos de arena blanca y arrecifes repletos de vida marina colorida.",
-      imageUrl: "https://picsum.photos/seed/falcon_nature/800/600"
+      imageUrl: "/img/falcon/Medanos-de-Coro2.jpg"
     }
   },
   {
@@ -65,21 +65,21 @@ export const venezuelaStates: StateData[] = [
     name: "Mérida",
     tagline: "El techo de Venezuela",
     description: "Cumbres nevadas, páramos misteriosos y una ciudad universitaria que palpita cultura entre los Andes.",
-    mainImage: "https://picsum.photos/seed/merida_main/1200/800",
+    mainImage: "/img/merida/sierra-nevada.jpg",
     gastronomy: {
       title: "Pisca Andina",
       description: "Un caldo restaurador de cilantro, huevo, papas y leche, diseñado para calentar el alma en la madrugada andina.",
-      imageUrl: "https://picsum.photos/seed/merida_gastro/800/600"
+      imageUrl: "/img/merida/juan-pablo-peñaloza.jpg"
     },
     culture: {
       title: "Feria del Sol",
       description: "Un carnaval de altura con desfiles, toros y celebraciones que iluminan la ciudad de los caballeros.",
-      imageUrl: "https://picsum.photos/seed/merida_cultura/800/600"
+      imageUrl: "/img/merida/sierra-nevada3.jpg"
     },
     nature: {
       title: "Pico Bolívar",
       description: "La cumbre más alta del país, cubierta de nieve eterna y accesible por el teleférico más alto y largo del mundo.",
-      imageUrl: "https://picsum.photos/seed/merida_nature/800/600"
+      imageUrl: "/img/merida/sierra-nevada2.jpg"
     }
   }
 ];

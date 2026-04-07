@@ -50,10 +50,33 @@ export default function Home() {
               <span className={styles.searchSubtitle}>Preparate para tu siguiente aventura.</span>
             </div>
           </div>
-        </div>
+      </div>
 
-        {/* INTRODUCTION */}
-        <section className={styles.introSection}>
+      {/* ABOUT TOURISM SECTION (Image right, text left) */}
+      <section className={styles.aboutTourism}>
+        <div className={`${styles.container} ${styles.aboutGrid}`}>
+          <div className={styles.aboutText}>
+            <h2 className={styles.aboutTitle}>Lo mágico de Venezuela</h2>
+            <p className={styles.aboutDescription}>
+              Nuestro país es un paraíso donde convergen todos los ecosistemas de la Tierra. Desde las cumbres nevadas de los Andes hasta la selva amazónica insondable, pasando por las playas cristalinas del Caribe.
+            </p>
+            <p className={styles.aboutDescription}>
+              Disfruta de la biodiversidad, la calidez inigualable de nuestra gente y una aventura que quedará grabada en tu memoria. Descubre por qué Venezuela es el tesoro mejor guardado para el viajero exquisito.
+            </p>
+          </div>
+          <div className={styles.aboutImageWrapper}>
+            <Image
+              src="/img/salto_angel.png"
+              alt="Salto Ángel, majestuosidad venezolana"
+              fill
+              className={styles.aboutImage}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* INTRODUCTION */}
+      <section className={styles.introSection}>
           <div className={styles.container}>
             <h2 className={styles.sectionTitle}>Nuestra Curaduría</h2>
             <p className={styles.sectionSubtitle}>

@@ -32,6 +32,7 @@ export const DestinationCard = ({
       className={`fade-in-up ${isIntersecting ? 'is-visible' : ''} ${styles.card} ${reverse ? styles.reverse : ''} ${className}`}
     >
       <div className={styles.imageContainer}>
+        {categoryName && <span className={styles.categoryBadge}>{categoryName}</span>}
         <Image 
           src={imageUrl} 
           alt={`Imagen de ${title}`}
@@ -41,7 +42,6 @@ export const DestinationCard = ({
         />
       </div>
       <div className={styles.content}>
-        {categoryName && <span className={styles.category}>{categoryName}</span>}
         <h3 className={styles.title}>{title}</h3>
         {tagline && <p className={styles.tagline}>{tagline}</p>}
         <p className={styles.description}>{description}</p>
