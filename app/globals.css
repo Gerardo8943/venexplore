@@ -2,10 +2,10 @@
 
 :root {
   /* Core Colors */
-  --color-primary: #F4A261;      /* Naranja atardecer principal */
-  --color-primary-dark: #E76F51;
-  --color-secondary: #2D6A4F;    /* Verde selvatico contraste */
-  --color-accent: #E9C46A;       /* Amarillo arena */
+  --color-primary: #7B1E38;      /* Vinotinto principal */
+  --color-primary-dark: #5A1227; /* Vinotinto profundo */
+  --color-secondary: #002244;    /* Azul profundo (Béisbol / Caribe) */
+  --color-accent: #D4A373;       /* Beige dorado arena */
   --color-jungle: #40916C;       /* Verde vibrante */
   
   /* Background & Surface Colors */

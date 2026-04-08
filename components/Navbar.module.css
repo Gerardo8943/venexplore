@@ -16,6 +16,7 @@
   width: 100%;
   max-width: 1100px;
   padding: 12px 16px;
+  position: relative; /* Base for absolute centering */
   background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -32,7 +33,7 @@
 
 /* Left Section */
 .navLeft {
-  flex: 1;
+  flex: 0 0 150px; /* Fixed width to prevent pushing center */
   display: flex;
   align-items: center;
 }
@@ -78,6 +79,9 @@
 @media (min-width: 1024px) {
   .navCenter {
     display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -97,7 +101,7 @@
 
 /* Right Section */
 .navRight {
-  flex: 1;
+  flex: 0 0 150px; /* Fixed width to balance left */
   display: flex;
   justify-content: flex-end;
   align-items: center;

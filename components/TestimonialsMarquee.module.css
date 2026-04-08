@@ -1,0 +1,133 @@
+.wrapper {
+  padding: 100px 0;
+  background-color: var(--color-bg);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  margin-bottom: 40px;
+}
+
+.header {
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-family: var(--font-inter), sans-serif;
+  color: var(--color-text-muted);
+  font-size: 1.125rem;
+}
+
+.marqueeContainer {
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+  /* Add subtle white gradient masks to fade the edges */
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marqueeTrack {
+  display: flex;
+  gap: 32px;
+  width: max-content;
+  animation: scrollMarquee 40s linear infinite;
+  padding-left: 32px;
+}
+
+.marqueeContainer:hover .marqueeTrack {
+  animation-play-state: paused;
+}
+
+@keyframes scrollMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 16px)); }
+}
+
+.bubbleCard {
+  width: 380px;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  cursor: pointer;
+}
+
+.bubbleCard:hover {
+  transform: translateY(-8px);
+}
+
+.bubbleText {
+  background: white;
+  padding: 32px;
+  border-radius: 24px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+/* The Bubble Tail */
+.bubbleTail {
+  width: 40px;
+  height: 40px;
+  background: white;
+  position: absolute;
+  bottom: 60px;
+  left: 40px;
+  transform: rotate(45deg);
+  z-index: 1;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+}
+
+.authorInfo {
+  margin-top: 24px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 3;
+}
+
+.avatarWrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  border: 3px solid white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.avatar {
+  object-fit: cover;
+}
+
+.authorName {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-text);
+  margin: 0 0 2px 0;
+}
+
+.authorRole {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.85rem;
+  color: var(--color-primary); 
+  /* This will inherit our new vinotinto if var(--color-primary) is used, let's make sure it is */
+  margin: 0;
+}

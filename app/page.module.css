@@ -212,9 +212,60 @@
 }
 
 .introSection {
-  padding: calc(var(--space-24) + 64px) 0 var(--space-8);
   text-align: center;
+  position: relative;
+  width: 100%;
 }
+
+.introContentWrapper {
+  background: linear-gradient(135deg, #7B1E38, #A52A2A);
+  /* Top edge forms a downwards V shape, taking 5 points total (pentagon) */
+  clip-path: polygon(0 0, 50% 6vw, 100% 0, 100% 100%, 0 100%);
+  padding: calc(8vw + 64px) 16px 80px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.introContentWrapper::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
+  z-index: -1;
+}
+
+.animatedText {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: var(--space-4);
+  background: linear-gradient(to right, #ffffff, #F0E6EA, #ffffff);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 3s linear infinite;
+}
+
+.animatedSubtitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
 
 /* --- NEW ABOUT TOURISM SECTION --- */
 .aboutTourism {

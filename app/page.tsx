@@ -2,6 +2,10 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { DestinationCard } from "@/components/DestinationCard";
 import { venezuelaStates } from "@/lib/data";
+import { StateAccordion } from "@/components/StateAccordion";
+import { VenezuelaMap } from "@/components/VenezuelaMap";
+import { SportsTourism } from "@/components/SportsTourism";
+import { TestimonialsMarquee } from "@/components/TestimonialsMarquee";
 import styles from "./page.module.css";
 import Image from "next/image";
 
@@ -15,8 +19,8 @@ export default function Home() {
         <div className={styles.heroWrapper}>
           <section className={styles.hero}>
             <Image
-              src="/hero-photo/principal-panel.jpg"
-              alt="Imponente paisaje venezolano"
+              src="/img/hero-photo/principal-panel.jpg"
+              alt="Playa calida de Venezuela"
               fill
               className={styles.heroImage}
               priority
@@ -30,7 +34,7 @@ export default function Home() {
               <div className={`fade-in-up is-visible delay-1 ${styles.heroBottomRight}`}>
                 <p className={styles.heroDescription}>
                   Descubre maravillas ocultas y una belleza inigualable.
-                  Disfruta de una aventura inolvidable en este destino premium.
+                  Venezuela te espera para vivir una aventura inolvidable.
                 </p>
                 <button className={styles.letsGoBtn}>
                   Empezar ahora
@@ -56,7 +60,7 @@ export default function Home() {
       <section className={styles.aboutTourism}>
         <div className={`${styles.container} ${styles.aboutGrid}`}>
           <div className={styles.aboutText}>
-            <h2 className={styles.aboutTitle}>Lo mágico de Venezuela</h2>
+            <h2 className={styles.aboutTitle}>Un paraíso en la tierra, esa es Venezuela</h2>
             <p className={styles.aboutDescription}>
               Nuestro país es un paraíso donde convergen todos los ecosistemas de la Tierra. Desde las cumbres nevadas de los Andes hasta la selva amazónica insondable, pasando por las playas cristalinas del Caribe.
             </p>
@@ -66,8 +70,8 @@ export default function Home() {
           </div>
           <div className={styles.aboutImageWrapper}>
             <Image
-              src="/img/salto_angel.png"
-              alt="Salto Ángel, majestuosidad venezolana"
+              src="/img/section-resume/salto_angel.png"
+              alt="Salto Ángel, caida del agua de manera vertical"
               fill
               className={styles.aboutImage}
             />
@@ -75,15 +79,20 @@ export default function Home() {
         </div>
       </section>
 
+      {/* INTERACTIVE MAP COMPONENT */}
+      <VenezuelaMap />
+
       {/* INTRODUCTION */}
       <section className={styles.introSection}>
+        <div className={styles.introContentWrapper}>
           <div className={styles.container}>
-            <h2 className={styles.sectionTitle}>Nuestra Curaduría</h2>
-            <p className={styles.sectionSubtitle}>
-              Experiencias transformadoras diseñadas para el viajero exigente.
+            <h2 className={styles.animatedText}>Descubre las maravillas de nuestros estados</h2>
+            <p className={styles.animatedSubtitle}>
+              Vive experiencias unicas, en lugares fascinantes y llenos de vida.
             </p>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* STATES SHOWCASE */}
         <section id="destinations" className={styles.section}>
@@ -103,40 +112,42 @@ export default function Home() {
                   reverse={index % 2 !== 0}
                 />
 
-                {/* Sub Categories Grid */}
-                <div className={styles.categoriesGrid}>
-                  <div className={styles.categoryCol}>
-                    <DestinationCard
-                      title={state.gastronomy.title}
-                      description={state.gastronomy.description}
-                      imageUrl={state.gastronomy.imageUrl}
-                      categoryName="Gastronomía"
-                      className={styles.categoryCardOverride}
-                    />
-                  </div>
-                  <div className={styles.categoryCol}>
-                    <DestinationCard
-                      title={state.culture.title}
-                      description={state.culture.description}
-                      imageUrl={state.culture.imageUrl}
-                      categoryName="Cultura"
-                      className={styles.categoryCardOverride}
-                    />
-                  </div>
-                  <div className={styles.categoryCol}>
-                    <DestinationCard
-                      title={state.nature.title}
-                      description={state.nature.description}
-                      imageUrl={state.nature.imageUrl}
-                      categoryName="Naturaleza"
-                      className={styles.categoryCardOverride}
-                    />
-                  </div>
+                {/* Accordion representation for categories */}
+                <div style={{ marginTop: '48px' }}>
+                  <StateAccordion 
+                    items={[
+                      {
+                        id: 'gastronomy',
+                        title: 'Gastronomía',
+                        description: state.gastronomy.description,
+                        imageUrl: state.gastronomy.imageUrl
+                      },
+                      {
+                        id: 'culture',
+                        title: 'Cultura y Eventos',
+                        description: state.culture.description,
+                        imageUrl: state.culture.imageUrl
+                      },
+                      {
+                        id: 'nature',
+                        title: 'Naturaleza',
+                        description: state.nature.description,
+                        imageUrl: state.nature.imageUrl
+                      }
+                    ]} 
+                  />
                 </div>
               </div>
             ))}
           </div>
         </section>
+
+        {/* SPORTS TOURISM SECTION */}
+        <SportsTourism />
+
+        {/* TESTIMONIALS MARQUEE */}
+        <TestimonialsMarquee />
+
       </main>
 
       <Footer />
