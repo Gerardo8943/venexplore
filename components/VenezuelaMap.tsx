@@ -16,7 +16,7 @@ export const VenezuelaMap = () => {
     <section className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>Explora el Mapa</h2>
+          <h2 className={styles.title}>Explora el Mapa de Venezuela</h2>
           <p className={styles.subtitle}>Toca los marcadores azules en nuestro mapa satelital para descubrir grandes destinos.</p>
         </div>
 
