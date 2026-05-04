@@ -218,7 +218,7 @@
 }
 
 .introContentWrapper {
-  background: linear-gradient(135deg, #7B1E38, #A52A2A);
+  background: linear-gradient(135deg, #0077B6, #023E8A); /* Hardcoded blue for safety */
   /* Top edge forms a downwards V shape, taking 5 points total (pentagon) */
   clip-path: polygon(0 0, 50% 6vw, 100% 0, 100% 100%, 0 100%);
   padding: calc(8vw + 64px) 16px 80px;
@@ -244,7 +244,7 @@
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: var(--space-4);
-  background: linear-gradient(to right, #ffffff, #F0E6EA, #ffffff);
+  background: linear-gradient(to right, #ffffff, #B0E0E6, #ffffff);
   background-size: 200% auto;
   color: transparent;
   -webkit-background-clip: text;
@@ -324,18 +324,57 @@
   transform: scale(1.05);
 }
 
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
 .sectionTitle {
-  font-size: 2.5rem;
-  margin-bottom: var(--space-4);
-  color: var(--color-primary);
+  font-family: var(--font-outfit), sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
 }
 
 .sectionSubtitle {
-  font-size: 1.25rem;
-  color: var(--color-text-muted);
-  max-width: 700px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
   margin: 0 auto;
 }
+
+.viewAllContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: -40px;
+  margin-bottom: 100px;
+}
+
+.viewAllBtn {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 500;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.viewAllBtn:hover {
+  background: #111;
+  color: white;
+  border-color: #111;
+  transform: translateY(-2px);
+}
+
 
 .section {
   padding: var(--space-8) 0;

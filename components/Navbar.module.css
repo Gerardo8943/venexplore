@@ -15,8 +15,8 @@
   justify-content: space-between;
   width: 100%;
   max-width: 1100px;
-  padding: 12px 16px;
-  position: relative; /* Base for absolute centering */
+  padding: 12px 32px;
+  position: relative;
   background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -33,7 +33,8 @@
 
 /* Left Section */
 .navLeft {
-  flex: 0 0 150px; /* Fixed width to prevent pushing center */
+  flex: 0 0 150px;
+  /* Fixed width to prevent pushing center */
   display: flex;
   align-items: center;
 }
@@ -43,7 +44,7 @@
   align-items: center;
   gap: 8px;
   background: white;
-  border: 1px solid rgba(0,0,0,0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   padding: 8px 16px;
   border-radius: 50px;
   font-family: var(--font-inter);
@@ -96,43 +97,75 @@
 }
 
 .link:hover {
-  color: var(--color-primary);
+  color: #0077B6 !important;
+  /* Force Sea Blue hover - no compromises! */
 }
 
-/* Right Section */
 .navRight {
-  flex: 0 0 150px; /* Fixed width to balance left */
+  flex: 1; 
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 12px;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 100px;
+  padding: 4px;
+  width: 40px;
+  height: 40px;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+  border: 1px solid transparent;
+  margin-right: 100px; /* Force it to move to the left away from the edge */
+}
+
+.searchActive {
+  width: 180px;
+  /* Further reduced width to ensure fit */
+  background: white;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.searchInput {
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 0;
+  width: 0;
+  display: none; /* Completely hide when not active */
+  font-family: var(--font-inter);
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.searchActive .searchInput {
+  display: block;
+  width: 100%;
+  opacity: 1;
+  padding: 0 12px;
 }
 
 .searchBtn {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
   background: transparent;
   border: none;
-  font-family: var(--font-inter);
-  font-weight: 500;
-  font-size: 0.875rem;
+  border-radius: 50%;
   color: var(--color-text);
   cursor: pointer;
-  padding: 8px;
-}
-
-.searchBtn span {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .searchBtn span {
-    display: inline;
-  }
+  transition: all 0.2s ease;
+  flex-shrink: 0;
 }
 
 .searchBtn:hover {
+  background: rgba(0, 0, 0, 0.05);
   color: var(--color-primary);
 }
 
