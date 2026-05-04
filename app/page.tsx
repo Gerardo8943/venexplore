@@ -19,7 +19,7 @@ export default function Home() {
         <div className={styles.heroWrapper}>
           <section className={styles.hero}>
             <Image
-              src="/img/hero-photo/principal-panel.jpg"
+              src="/img/hero-section/principal-panel.jpg"
               alt="Playa calida de Venezuela"
               fill
               className={styles.heroImage}
@@ -70,7 +70,7 @@ export default function Home() {
           </div>
           <div className={styles.aboutImageWrapper}>
             <Image
-              src="/img/section-resume/salto_angel.png"
+              src="/img/resume/salto_angel.png"
               alt="Salto Ángel, caida del agua de manera vertical"
               fill
               className={styles.aboutImage}
@@ -79,8 +79,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* INTERACTIVE MAP COMPONENT */}
-      <VenezuelaMap />
+      {/* PREMIUM EXPERIENCES SECTION */}
+      {/* <PremiumExperiences /> */}
 
       {/* INTRODUCTION */}
       <section className={styles.introSection}>
