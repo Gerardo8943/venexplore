@@ -60,7 +60,6 @@ export const TestimonialsMarquee = () => {
               <div className={styles.bubbleText}>
                 "{testimonial.text}"
               </div>
-              <div className={styles.bubbleTail}></div>
               
               <div className={styles.authorInfo}>
                 <div className={styles.avatarWrapper}>

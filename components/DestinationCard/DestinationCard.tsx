@@ -1,8 +1,8 @@
 "use client";
 
 import Image from 'next/image';
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
-import { Button } from './Button';
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+import { Button } from '@/components/Button';
 import styles from './DestinationCard.module.css';
 
 interface DestinationCardProps {

@@ -79,17 +79,19 @@
   border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
-/* The Bubble Tail */
-.bubbleTail {
-  width: 40px;
-  height: 40px;
-  background: white;
+.bubbleText::after {
+  content: '';
   position: absolute;
-  bottom: 60px;
+  bottom: -15px;
   left: 40px;
+  width: 30px;
+  height: 30px;
+  background: white;
   transform: rotate(45deg);
-  z-index: 1;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+  z-index: -1;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+  border-right: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .authorInfo {

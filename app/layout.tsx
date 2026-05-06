@@ -29,7 +29,7 @@ export default function RootLayout({
       lang="es"
       className={`${inter.variable} ${playfair.variable}`}
     >
-      <body>
+      <body suppressHydrationWarning>
         {children}
       </body>
     </html>

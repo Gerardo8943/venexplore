@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import styles from './SportsTourism.module.css';
 
@@ -24,7 +24,7 @@ export const SportsTourism = () => {
               fill
               className={styles.image}
               sizes="100vw"
-              priority
+              preload
             />
             <div className={styles.overlay}></div>
           </div>

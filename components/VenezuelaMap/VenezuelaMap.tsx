@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 import styles from './VenezuelaMap.module.css';
 
 // Dynamically load the Leaflet map so it bypasses SSR and avoids window errors
-const MapComponent = dynamic(() => import('./LeafletMap'), {
+const MapComponent = dynamic(() => import('@/components/LeafletMap'), {
   ssr: false,
   loading: () => <div className={styles.mapLoading}>Cargando Mapa Interactivo...</div>
 });

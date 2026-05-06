@@ -46,6 +46,7 @@ export const FeaturedGuides = () => {
                   alt={guide.title}
                   fill
                   style={{ objectFit: 'cover' }}
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
               <div className={styles.cardOverlay}>

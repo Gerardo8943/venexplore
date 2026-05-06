@@ -23,7 +23,8 @@ export default function Home() {
               alt="Playa calida de Venezuela"
               fill
               className={styles.heroImage}
-              priority
+              preload
+              sizes="100vw"
             />
             {/* Subtle gradient for text legibility, much lighter than before */}
             <div className={styles.heroOverlay}></div>
@@ -74,6 +75,7 @@ export default function Home() {
               alt="Salto Ángel, caida del agua de manera vertical"
               fill
               className={styles.aboutImage}
+              sizes="(max-width: 900px) 100vw, 400px"
             />
           </div>
         </div>
