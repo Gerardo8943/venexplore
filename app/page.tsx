@@ -1,8 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { DestinationCard } from "@/components/DestinationCard";
-import { venezuelaStates } from "@/lib/data";
-import { StateAccordion } from "@/components/StateAccordion";
+import { DestinationsShowcase } from "@/components/DestinationsShowcase";
 import { FeaturedGuides } from "@/components/FeaturedGuides";
 import { SportsTourism } from "@/components/SportsTourism";
 import { TestimonialsMarquee } from "@/components/TestimonialsMarquee";
@@ -84,79 +82,8 @@ export default function Home() {
       {/* FEATURED GUIDES SECTION */}
       <FeaturedGuides />
 
-      {/* INTRODUCTION */}
-      <section className={styles.introSection}>
-        <div className={styles.introContentWrapper}>
-          <div className={styles.container}>
-            <h2 className={styles.animatedText}>Descubre las maravillas de nuestros estados</h2>
-            <p className={styles.animatedSubtitle}>
-              Vive experiencias unicas, en lugares fascinantes y llenos de vida.
-            </p>
-          </div>
-        </div>
-      </section>
-
-        {/* STATES SHOWCASE */}
-        <section id="destinations" className={styles.section}>
-          <div className={styles.container}>
-            <div className={styles.sectionHeader}>
-              <h2 className={styles.sectionTitle}>Destinos Imperdibles</h2>
-              <p className={styles.sectionSubtitle}>Una selección de los tesoros más preciados de nuestra tierra.</p>
-            </div>
-            {venezuelaStates.slice(0, 3).map((state, index) => (
-              <div key={state.id} className={styles.stateBlock}>
-                <div className={styles.stateHeader}>
-                  <h2 className={styles.stateName}>{state.name}</h2>
-                  <p className={styles.stateTagline}>{state.tagline}</p>
-                </div>
-
-                {/* Main State Card */}
-                <DestinationCard
-                  title={state.name}
-                  description={state.description}
-                  imageUrl={state.mainImage}
-                  reverse={index % 2 !== 0}
-                />
-
-                {/* Accordion representation for categories */}
-                <div style={{ marginTop: '48px' }}>
-                  <StateAccordion 
-                    items={[
-                      {
-                        id: 'gastronomy',
-                        title: 'Gastronomía',
-                        description: state.gastronomy.description,
-                        imageUrl: state.gastronomy.imageUrl
-                      },
-                      {
-                        id: 'culture',
-                        title: 'Cultura y Eventos',
-                        description: state.culture.description,
-                        imageUrl: state.culture.imageUrl
-                      },
-                      {
-                        id: 'nature',
-                        title: 'Naturaleza',
-                        description: state.nature.description,
-                        imageUrl: state.nature.imageUrl
-                      }
-                    ]} 
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className={styles.viewAllContainer}>
-            <button className={styles.viewAllBtn}>
-              Explorar todos los estados
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </button>
-          </div>
-        </section>
+      {/* DESTINATIONS SHOWCASE (New cinematic component) */}
+      <DestinationsShowcase />
 
         {/* SPORTS TOURISM SECTION */}
         <SportsTourism />

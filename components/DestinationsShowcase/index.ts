@@ -1,0 +1,1 @@
+export { DestinationsShowcase } from './DestinationsShowcase';
