@@ -15,8 +15,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Venexplore | Turismo de Lujo",
-  description: "Descubre los paisajes más remotos y exclusivos de Venezuela. Naturaleza, cultura y gastronomía premium.",
+  title: "Venexplore",
+  description: "Descubre los paisajes más remotos y maravillosos de Venezuela. Naturaleza, cultura y gastronomía ideal.",
 };
 
 export default function RootLayout({
