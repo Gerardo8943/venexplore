@@ -36,7 +36,7 @@ export default function Home() {
                   Venezuela te espera para vivir una aventura inolvidable.
                 </p>
                 <button className={styles.letsGoBtn}>
-                  Empezar ahora
+                  Explorar lugares
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                     <polyline points="12 5 19 12 12 19"></polyline>
@@ -49,8 +49,8 @@ export default function Home() {
           {/* FLOATING SEARCH BAR (Optional addition to match Dribbble closely) */}
           <div className={`fade-in-up is-visible delay-2 ${styles.searchBar}`}>
             <div className={styles.searchTitle}>
-              Visita los lugares unicos de Venezuela
-              <span className={styles.searchSubtitle}>Preparate para tu siguiente aventura.</span>
+              Visita los destinos unicos de Venezuela
+              <span className={styles.searchSubtitle}>Preparate para adentrarte en un pais lleno de maravillas</span>
             </div>
           </div>
       </div>

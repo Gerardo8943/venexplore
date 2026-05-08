@@ -27,7 +27,7 @@ export const Navbar = () => {
         {/* Center: Links */}
         <nav className={styles.navCenter}>
           <Link href="#destinations" className={styles.link}>Destinos</Link>
-          <Link href="#experiences" className={styles.link}>Experiencias</Link>
+          <Link href="#culture" className={styles.link}>Cultura</Link>
           <Link href="#food" className={styles.link}>Gastronomia</Link>
           <Link href="#about" className={styles.link}>Nosotros</Link>
         </nav>
