@@ -1,18 +1,14 @@
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { DestinationsShowcase } from "@/components/DestinationsShowcase";
 import { FeaturedGuides } from "@/components/FeaturedGuides";
 import { SportsTourism } from "@/components/SportsTourism";
 import { TestimonialsMarquee } from "@/components/TestimonialsMarquee";
+import { GastronomiaSection } from "@/components/GastronomiaSection";
 import styles from "./page.module.css";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <>
-      <Navbar />
-
-      <main className={styles.main}>
+    <main className={styles.main}>
         {/* HERO SECTION - PAPERPILLAR STYLE */}
         <div className={styles.heroWrapper}>
           <section className={styles.hero}>
@@ -21,7 +17,7 @@ export default function Home() {
               alt="Playa calida de Venezuela"
               fill
               className={styles.heroImage}
-              preload
+              priority
               sizes="100vw"
             />
             {/* Subtle gradient for text legibility, much lighter than before */}
@@ -85,6 +81,9 @@ export default function Home() {
       {/* DESTINATIONS SHOWCASE (New cinematic component) */}
       <DestinationsShowcase />
 
+        {/* GASTRONOMIA NACIONAL */}
+        <GastronomiaSection />
+
         {/* SPORTS TOURISM SECTION */}
         <SportsTourism />
 
@@ -92,8 +91,5 @@ export default function Home() {
         <TestimonialsMarquee />
 
       </main>
-
-      <Footer />
-    </>
   );
 }

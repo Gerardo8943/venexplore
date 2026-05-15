@@ -1,0 +1,11 @@
+.wrapper {
+  background-color: var(--color-bg);
+}
+
+.infoSection {
+  padding: 60px 0 40px;
+}
+
+.categoriesSection {
+  padding-bottom: 80px;
+}

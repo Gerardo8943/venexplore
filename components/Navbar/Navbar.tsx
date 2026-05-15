@@ -2,11 +2,14 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import styles from './Navbar.module.css';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,19 +20,27 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const headerClass = isHome
+    ? `${styles.header} ${isScrolled ? styles.scrolled : ''}`
+    : `${styles.header} ${styles.static}`;
+
+  const wrapperClass = isHome
+    ? styles.navbarWrapper
+    : `${styles.navbarWrapper} ${styles.wrapperStatic}`;
+
   return (
-    <div className={styles.navbarWrapper}>
-      <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+    <div className={wrapperClass}>
+      <header className={headerClass}>
         
         {/* Left: Menu (Empty to balance flexbox) */}
         <div className={styles.navLeft}></div>
         
         {/* Center: Links */}
         <nav className={styles.navCenter}>
-          <Link href="#destinations" className={styles.link}>Destinos</Link>
-          <Link href="#experiences" className={styles.link}>Experiencias</Link>
-          <Link href="#food" className={styles.link}>Gastronomia</Link>
-          <Link href="#about" className={styles.link}>Nosotros</Link>
+          <Link href="/" className={styles.link}>Inicio</Link>
+          <Link href="/destinos" className={styles.link}>Destinos</Link>
+          <Link href="/deportes" className={styles.link}>Deportes</Link>
+          <Link href="/#gastronomia" className={styles.link}>Gastronomía</Link>
         </nav>
 
         {/* Right: Actions */}

@@ -1,0 +1,1 @@
+export { VenezuelaMapSVG } from "./VenezuelaMapSVG";

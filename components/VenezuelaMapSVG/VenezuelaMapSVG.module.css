@@ -1,0 +1,51 @@
+.svg {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+.baseOutline {
+  fill: #f0f4f8;
+  stroke: #cbd5e1;
+  stroke-width: 1;
+}
+
+.baseBorder {
+  fill: none;
+  stroke: #94a3b8;
+  stroke-width: 2;
+}
+
+.stateGroup {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.stateGroup:hover {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.statePath {
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  cursor: pointer;
+}
+
+.stateActive {
+  filter: brightness(1.1) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+  stroke-width: 3;
+}
+
+.stateLabel {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 10px;
+  text-anchor: middle;
+  dominant-baseline: central;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.labelActive {
+  font-size: 11px;
+}

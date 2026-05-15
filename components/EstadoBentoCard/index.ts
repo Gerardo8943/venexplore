@@ -1,0 +1,1 @@
+export { EstadoBentoCard } from "./EstadoBentoCard";

@@ -1,0 +1,1 @@
+export { GastronomiaSection } from "./GastronomiaSection";

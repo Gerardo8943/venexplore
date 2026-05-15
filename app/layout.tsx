@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Playfair_Display, Outfit } from "next/font/google";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import "./globals.css";
 
 const inter = Inter({
@@ -11,6 +13,12 @@ const inter = Inter({
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
+  display: "swap",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
   display: "swap",
 });
 
@@ -27,10 +35,12 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${inter.variable} ${playfair.variable}`}
+      className={`${inter.variable} ${playfair.variable} ${outfit.variable}`}
     >
       <body suppressHydrationWarning>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

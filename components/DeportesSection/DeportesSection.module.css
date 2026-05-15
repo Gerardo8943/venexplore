@@ -1,0 +1,238 @@
+.wrapper {
+  padding: 100px 0 120px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+  padding: 0 24px;
+}
+
+.sectionLabel {
+  display: inline-block;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #E63946;
+  margin-bottom: 12px;
+}
+
+.sectionTitle {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--color-text);
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.sectionSubtitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  z-index: 2;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 140px;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  background: linear-gradient(180deg,
+    #FFD100 0%,
+    #CF142B 33%,
+    #003DA5 66%,
+    #0077B6 100%
+  );
+  z-index: 1;
+  opacity: 0.4;
+  border-radius: 4px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.left {
+  flex-direction: row;
+}
+
+.right {
+  flex-direction: row-reverse;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  max-width: 460px;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  border-color: var(--sport-color);
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .imageWrapper {
+    width: 45%;
+    aspect-ratio: auto;
+  }
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.card:hover .image {
+  transform: scale(1.08);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 50%, rgba(0,0,0,0.2) 100%);
+  z-index: 2;
+}
+
+.content {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.iconCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--sport-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.iconNumber {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+}
+
+.sportName {
+  font-family: var(--font-playfair), serif;
+  font-size: 1.5rem;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--sport-color);
+}
+
+.description {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-top: 4px;
+}
+
+/* Timeline dot */
+.timelineDot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 4px white;
+}
+
+.dotPulse {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid;
+  opacity: 0.4;
+  animation: pulse 2.5s ease-out infinite;
+  position: absolute;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .timelineLine { display: none; }
+  .timelineDot { display: none; }
+
+  .item,
+  .left,
+  .right {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}

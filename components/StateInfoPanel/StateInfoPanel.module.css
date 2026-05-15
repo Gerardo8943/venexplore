@@ -1,0 +1,32 @@
+.panel {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.tagline {
+  display: inline-block;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: var(--font-playfair), serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}

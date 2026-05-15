@@ -1,0 +1,1 @@
+export { DeportesSection } from "./DeportesSection";

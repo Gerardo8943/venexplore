@@ -24,7 +24,7 @@ export const SportsTourism = () => {
               fill
               className={styles.image}
               sizes="100vw"
-              preload
+              priority
             />
             <div className={styles.overlay}></div>
           </div>
