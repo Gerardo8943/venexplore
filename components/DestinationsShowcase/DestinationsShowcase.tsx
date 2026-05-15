@@ -42,7 +42,7 @@ export const DestinationsShowcase = () => {
 
       <div className={styles.contentContainer}>
         <header>
-          <h2 className={styles.header}>Nuestros destinos principales</h2>
+          <h2 className={styles.header}>Nuestros lugares emblematicos</h2>
         </header>
 
         <div className={styles.mainContent}>
