@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/img/deportes/hero-beisbol.jpg",
+        url: "/img/deportes/hero-beisbol.webp",
         width: 1920,
         height: 1080,
         alt: "Selección de Venezuela celebrando el Clásico Mundial de Béisbol",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Deportes Nacionales | Venexplore",
     description:
       "Leyendas, momentos inolvidables y la historia del deporte venezolano.",
-    images: ["/img/deportes/hero-beisbol.jpg"],
+    images: ["/img/deportes/hero-beisbol.webp"],
   },
   robots: {
     index: true,

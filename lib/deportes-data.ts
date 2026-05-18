@@ -34,7 +34,7 @@ export const leyendas: Leyenda[] = [
     deporte: "Béisbol",
     description: "El pionero. Primer venezolano exaltado al Salón de la Fama de Cooperstown. Campocorto legendario de los White Sox y Orioles, ganador de la Serie Mundial de 1966 y nueve Guantes de Oro consecutivos.",
     frase: "El béisbol es un deporte de respeto, disciplina y pasión. Nunca olvides de dónde vienes y quién te apoyó en el camino.",
-    image: "/img/deportes/luis-aparicio.jpg",
+    image: "/img/deportes/luis-aparicio.webp",
     logros: ["Salón de la Fama de Cooperstown (1984)", "9 Guantes de Oro", "Novato del Año 1956", "Campeón Serie Mundial 1966"]
   },
   {
@@ -43,7 +43,7 @@ export const leyendas: Leyenda[] = [
     deporte: "Béisbol",
     description: "Triple Corona de bateo en 2012, dos MVP de la Liga Americana, 500+ jonrones y miembro del Club de los 3,000 hits. Considerado uno de los mejores bateadores derechos de la historia.",
     frase: "Se tiene que tener compromiso con el país. Representar a Venezuela es el honor más grande que puede tener un pelotero.",
-    image: "/img/deportes/miguel-cabrera.jpg",
+    image: "/img/deportes/miguel-cabrera.webp",
     logros: ["Triple Corona (2012)", "2x MVP Liga Americana", "500 HR / 3,000 Hits", "11x Juego de Estrellas"]
   },
   {
@@ -52,7 +52,7 @@ export const leyendas: Leyenda[] = [
     deporte: "Fútbol",
     description: "El mejor futbolista venezolano de todos los tiempos. Brilló en el Mallorca, Borussia Mönchengladbach y la Vinotinto. Su golpeo de balón y precisión en tiros libres lo convirtieron en una leyenda.",
     frase: "Ser venezolano es llevar la Vinotinto en el pecho, no importa dónde estés. Cada gol es un grito de esperanza para nuestro país.",
-    image: "/img/deportes/juan-arango.jpg",
+    image: "/img/deportes/juan-arango.webp",
     logros: ["Máximo goleador histórico de la Vinotinto", "Copa del Rey con Mallorca (2003)", "Bundesliga con Gladbach", "Gol olímpico histórico vs. Bolivia"]
   },
   {
@@ -61,7 +61,7 @@ export const leyendas: Leyenda[] = [
     deporte: "Baloncesto",
     description: "Primer venezolano en la NBA. Bicampeón con los Houston Rockets (1994, 1995) junto a Hakeem Olajuwon. Representó a Venezuela en los Juegos Olímpicos de Barcelona 1992.",
     frase: "Ser el primer venezolano en la NBA fue un sueño cumplido. Quiero que las nuevas generaciones sepan que todo es posible con trabajo y dedicación.",
-    image: "/img/deportes/carl-herrera.jpg",
+    image: "/img/deportes/carl-herrera.webp",
     logros: ["2x Campeón NBA (1994, 1995)", "Primer venezolano en la NBA", "Juegos Olímpicos Barcelona 1992", "Medalla de Oro Sudamericano 1991"]
   },
   {
@@ -70,7 +70,7 @@ export const leyendas: Leyenda[] = [
     deporte: "Fútbol",
     description: "Máximo goleador histórico de la selección venezolana. Su potencia y olfato de gol lo llevaron a brillar en Europa (Málaga, Zenit, Newcastle) y convertirse en el estandarte de la Vinotinto.",
     frase: "Cada vez que visto esta camiseta, represento a 30 millones de venezolanos que sueñan con vernos en un Mundial. Eso no tiene precio.",
-    image: "/img/deportes/salomon-rondon.jpg",
+    image: "/img/deportes/salomon-rondon.webp",
     logros: ["Máximo goleador histórico de la Vinotinto", "Máximo goleador histórico del Zenit", "Trofeo Pichichi Copa América 2019", "Champions League con el Newcastle"]
   },
   {
@@ -79,7 +79,7 @@ export const leyendas: Leyenda[] = [
     deporte: "Atletismo",
     description: "La reina del triple salto. Primera mujer venezolana en ganar un oro olímpico, plusmarquista mundial con 15.67m en Tokio 2020. Siete veces campeona mundial, la atleta más dominante de su generación.",
     frase: "Esto es historia. Mucha gente se identificará conmigo porque no soy solo yo, son alrededor de 40 millones de personas de mi país los que me siguieron.",
-    image: "/img/deportes/yulimar-rojas.jpg",
+    image: "/img/deportes/yulimar-rojas.webp",
     logros: ["Oro Olímpico Tokio 2020", "Récord Mundial (15.67m)", "4x Campeona Mundial", "Primera mujer venezolana con oro olímpico"]
   }
 ];
@@ -134,7 +134,7 @@ export const timelineSports: TimelineSport[] = [
     color: "#CF142B",
     description: "La pasión nacional. El deporte rey que corre por las venas de cada venezolano desde la infancia.",
     icon: "⚾",
-    image: "/img/deportes/timeline-beisbol.jpg",
+    image: "/img/deportes/timeline-beisbol.webp",
     hitos: [
       "1941: Venezuela campeona mundial amateur",
       "1956: Luis Aparicio debuta en MLB",
@@ -150,7 +150,7 @@ export const timelineSports: TimelineSport[] = [
     color: "#003DA5",
     description: "Campeones de leyenda que pusieron a Venezuela en lo más alto del ring mundial.",
     icon: "🥊",
-    image: "/img/deportes/timeline-boxeo.jpg",
+    image: "/img/deportes/timeline-boxeo.webp",
     hitos: [
       "1968: Morochito Rodríguez, primer oro olímpico",
       "1976: Pedro Gamarro, plata olímpica",
@@ -166,7 +166,7 @@ export const timelineSports: TimelineSport[] = [
     color: "#FFD100",
     description: "Gigantes criollos que han llevado el baloncesto venezolano a escenarios internacionales.",
     icon: "🏀",
-    image: "/img/deportes/timeline-baloncesto.jpg",
+    image: "/img/deportes/timeline-baloncesto.webp",
     hitos: [
       "1991: Carl Herrera, primer venezolano en la NBA",
       "1994: Herrera campeón NBA con Houston Rockets",

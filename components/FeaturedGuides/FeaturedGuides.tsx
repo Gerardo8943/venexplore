@@ -17,14 +17,14 @@ const guides = [
     title: "Los Roques: El azul que no sabías que existía",
     excerpt: "Un archipiélago de coral donde el degradado del mar caribe desafía cualquier imaginación.",
     category: "Playa",
-    image: "/img/hero-section/principal-panel.jpg" // Temporal, use existing for now
+    image: "/img/hero-section/principal-panel.webp" // Temporal, use existing for now
   },
   {
     id: 3,
     title: "La Ruta del Chocolate: Un viaje sensorial",
     excerpt: "Desde el árbol hasta la barra, exploramos por qué el cacao venezolano es considerado el mejor del mundo.",
     category: "Gastronomía",
-    image: "/img/estados/miranda/miranda-personas.jpg"
+    image: "/img/estados/miranda/miranda-personas.webp"
   }
 ];
 

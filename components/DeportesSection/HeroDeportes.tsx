@@ -9,7 +9,7 @@ export const HeroDeportes = () => {
   return (
     <section className={styles.hero}>
       <Image
-        src="/img/deportes/hero-beisbol.jpg"
+        src="/img/deportes/hero-beisbol.webp"
         alt="Selección de Venezuela celebrando el título del Clásico Mundial de Béisbol 2026"
         fill
         className={styles.heroImage}

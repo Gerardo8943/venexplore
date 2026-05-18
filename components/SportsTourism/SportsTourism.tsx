@@ -19,7 +19,7 @@ export const SportsTourism = () => {
         <div className={styles.parallaxPane}>
           <div className={styles.imageBox}>
             <Image 
-              src="/img/deportes/landing-sports/kitesurfing.jpg"
+              src="/img/deportes/landing-sports/kitesurfing.webp"
               alt="Kitesurf en El Yaque, Margarita"
               fill
               className={styles.image}
@@ -38,7 +38,7 @@ export const SportsTourism = () => {
         <div className={styles.parallaxPane}>
           <div className={styles.imageBox}>
             <Image 
-              src="/img/deportes/landing-sports/parapentev2.jpg"
+              src="/img/deportes/landing-sports/parapentev2.webp"
               alt="Parapente en Mérida"
               fill
               className={styles.image}

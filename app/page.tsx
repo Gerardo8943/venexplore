@@ -13,7 +13,7 @@ export default function Home() {
         <div className={styles.heroWrapper}>
           <section className={styles.hero}>
             <Image
-              src="/img/hero-section/principal-panel.jpg"
+              src="/img/hero-section/principal-panel.webp"
               alt="Playa calida de Venezuela"
               fill
               className={styles.heroImage}

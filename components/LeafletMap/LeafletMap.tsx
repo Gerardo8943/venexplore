@@ -50,7 +50,7 @@ const mapDestinations = [
     name: 'La Guaira',
     lat: 10.6000,
     lng: -66.9333,
-    image: '/img/estados/vargas/playa-vargas.jpg',
+    image: '/img/estados/vargas/playa-vargas.webp',
     description: 'Vibrante litoral y cultura afrocaribeña.'
   }
 ];
