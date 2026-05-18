@@ -23,6 +23,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://venexplore.com"),
   title: "Venexplore",
   description: "Descubre los paisajes más remotos y maravillosos de Venezuela. Naturaleza, cultura y gastronomía ideal.",
 };
