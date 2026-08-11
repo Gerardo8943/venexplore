@@ -40,6 +40,12 @@ export default function Home() {
                 </button>
               </div>
             </div>
+
+            <div className={styles.flagBar}>
+              <span className={styles.flagYellow} />
+              <span className={styles.flagBlue} />
+              <span className={styles.flagRed} />
+            </div>
           </section>
 
           {/* FLOATING SEARCH BAR (Optional addition to match Dribbble closely) */}

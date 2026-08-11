@@ -10,7 +10,7 @@ export const HeroDeportes = () => {
     <section className={styles.hero}>
       <Image
         src="/img/deportes/hero-beisbol.webp"
-        alt="Selección de Venezuela celebrando el título del Clásico Mundial de Béisbol 2026"
+        alt="Selección de Venezuela celebrando el título del Clásico Mundial de Béisbol"
         fill
         className={styles.heroImage}
         priority
@@ -25,14 +25,7 @@ export const HeroDeportes = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <motion.span
-            className={styles.badge}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            Pasión que une a una nación
-          </motion.span>
+        
 
           <h1 className={styles.title}>Deportes nacionales</h1>
 

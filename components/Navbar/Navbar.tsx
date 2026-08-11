@@ -9,7 +9,7 @@ export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const pathname = usePathname();
-  const isHome = pathname === '/';
+  const hasHero = pathname === '/' || pathname === '/deportes';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,11 +20,11 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const headerClass = isHome
+  const headerClass = hasHero
     ? `${styles.header} ${isScrolled ? styles.scrolled : ''}`
     : `${styles.header} ${styles.static}`;
 
-  const wrapperClass = isHome
+  const wrapperClass = hasHero
     ? styles.navbarWrapper
     : `${styles.navbarWrapper} ${styles.wrapperStatic}`;
 
