@@ -34,28 +34,28 @@ export const venezuelaGastronomy = [
     name: "Pabellón Criollo",
     description: "El plato bandera de Venezuela: arroz blanco, carne mechada, caraotas negras, tajadas de plátano maduro frito y huevo revuelto. Una sinfonía de sabores y texturas.",
     region: "Todo el país",
-    image: "/img/estados/falcon/Medanos-de-Coro1.webp"
+    image: "/img/gastronomia/pabellonh.webp"
   },
   {
     id: "arepa",
     name: "Arepa Reina Pepiada",
     description: "La arega reina: masa de maíz rellena con guasacaca de pollo desmenuzado, aguacate, mayonesa y cilantro fresco. Un bocado celestial.",
     region: "Originaria de Caracas",
-    image: "/img/estados/merida/sierra-nevada.webp"
+    image: "/img/gastronomia/areparp.webp"
   },
   {
     id: "hallaca",
     name: "Hallaca",
     description: "Masa de maíz rellena con guiso de cerdo, pollo, res, aceitunas, alcaparras y pasas, envuelta en hojas de plátano. La realeza de la navidad venezolana.",
     region: "Todo el país",
-    image: "/img/estados/miranda/miranda-personas.webp"
+    image: "/img/gastronomia/hallacas.webp"
   },
   {
     id: "cachapa",
     name: "Cachapa con Queso de Mano",
     description: "Panqueque de maíz tierno, dulce y dorado, relleno de queso de mano fresco y cremoso. La merienda perfecta en los llanos.",
     region: "Región de los Llanos",
-    image: "/img/estados/nueva-esparta/ambiente.webp"
+    image: "/img/gastronomia/cachapas.webp"
   }
 ];
 
