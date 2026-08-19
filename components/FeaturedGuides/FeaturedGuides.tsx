@@ -10,7 +10,7 @@ const guides = [
     title: "Canaima: El susurro de los antiguos Tepuyes",
     excerpt: "Descubre el corazón de la Gran Sabana, donde el tiempo se detiene y la naturaleza habla en su forma más pura.",
     category: "Aventura",
-    image: "/img/resume/salto_angel.png"
+    image: "/img/resume/salto_angel.webp"
   },
   {
     id: 2,

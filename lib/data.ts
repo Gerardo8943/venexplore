@@ -131,12 +131,12 @@ export const venezuelaStates: StateData[] = [
     culture: {
       title: "Diablos Danzantes",
       description: "Un ritual sincrético lleno de percusión, máscaras vibrantes y devoción profunda resonando en Naiguatá.",
-      imageUrl: "/img/estados/vargas/diablos-danzantes.png"
+      imageUrl: "/img/estados/vargas/diablos-danzantes.webp"
     },
     nature: {
       title: "Todasana",
       description: "Ríos helados que se cruzan con ensenadas vírgenes, un rincón sagrado para surfistas y almas libres.",
-      imageUrl: "/img/estados/vargas/todasana.png"
+      imageUrl: "/img/estados/vargas/todasana.webp"
     }
   },
   {

@@ -71,7 +71,7 @@ export default function Home() {
           </div>
           <div className={styles.aboutImageWrapper}>
             <Image
-              src="/img/resume/salto_angel.png"
+              src="/img/resume/salto_angel.webp"
               alt="Salto Ángel, caida del agua de manera vertical"
               fill
               className={styles.aboutImage}

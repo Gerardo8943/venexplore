@@ -42,7 +42,7 @@ const mapDestinations = [
     name: 'Salto Ángel',
     lat: 5.9688,
     lng: -62.5373,
-    image: '/img/resume/salto_angel.png',
+    image: '/img/resume/salto_angel.webp',
     description: 'La caída de agua más alta del mundo.'
   },
   {
