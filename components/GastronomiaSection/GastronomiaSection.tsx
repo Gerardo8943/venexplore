@@ -8,7 +8,6 @@ import styles from './GastronomiaSection.module.css';
 
 export const GastronomiaSection = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
@@ -17,7 +16,6 @@ export const GastronomiaSection = () => {
     if (!el) return;
     const maxScroll = el.scrollWidth - el.clientWidth;
     const current = el.scrollLeft;
-    setScrollProgress(maxScroll > 0 ? current / maxScroll : 0);
     setCanScrollLeft(current > 10);
     setCanScrollRight(current < maxScroll - 10);
   };
@@ -92,27 +90,6 @@ export const GastronomiaSection = () => {
             </svg>
           </button>
         )}
-      </div>
-
-      <div className={styles.progressContainer}>
-        <div className={styles.progressBar}>
-          <div className={styles.progressFill} style={{ width: `${scrollProgress * 100}%` }} />
-        </div>
-        <div className={styles.progressDots}>
-          {venezuelaGastronomy.map((_, i) => (
-            <button
-              key={i}
-              className={`${styles.dot} ${i / (venezuelaGastronomy.length - 1) <= scrollProgress + 0.1 ? styles.dotActive : ''}`}
-              onClick={() => {
-                const el = scrollRef.current;
-                if (!el) return;
-                const cardWidth = el.scrollWidth / venezuelaGastronomy.length;
-                el.scrollTo({ left: cardWidth * i - (el.clientWidth - cardWidth) / 2, behavior: 'smooth' });
-              }}
-              aria-label={`Ir a ${venezuelaGastronomy[i].name}`}
-            />
-          ))}
-        </div>
       </div>
     </section>
   );
